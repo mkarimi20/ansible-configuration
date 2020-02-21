@@ -14,5 +14,5 @@
           - telnet
           - elinks
           - wget
-          - unizp
+          - unzip
         state: present
