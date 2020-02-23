@@ -1,10 +1,11 @@
 ---
-- ec2:
-    key_name: mykey
+- name: creating 2c2-instance
+  ec2:
+    key_name: bastion
     instance_type: t2.micro
     image: ami-123456
     wait: yes
-    group: webserver
-    count: 3
+    group: default
+    count: 1
     vpc_subnet_id: subnet-29e63245
     assign_public_ip: yes
