@@ -1,15 +1,10 @@
 ---
-- name: sample instance
-  ec2:
-    key_name: bastion
-    region: "{{ Enter region here }}"
-    count: 1
-    instance_tags:
-      Name: "{{ put the instance name here }}"
-      Owner: "{{ put the owner name here }}"
-    instance_type: "{{ Enter instacne type here }}"
-    image: ami-25bd2743
+- ec2:
+    key_name: mykey
+    instance_type: t2.micro
+    image: ami-123456
     wait: yes
-    group: git-lab
-    vpc_subnet_id: subnet-50350f7e
+    group: webserver
+    count: 3
+    vpc_subnet_id: subnet-29e63245
     assign_public_ip: yes
