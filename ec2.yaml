@@ -1,3 +1,4 @@
+---
 name: sample instance
 - ec2:
     key_name: bastion
