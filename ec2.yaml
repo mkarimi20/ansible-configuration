@@ -1,6 +1,6 @@
 ---
-name: sample instance
-- ec2:
+- name: sample instance
+  ec2:
     key_name: bastion
     region: {{ Enter region here }}
     count: 1
