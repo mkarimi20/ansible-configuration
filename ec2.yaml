@@ -1,12 +1,12 @@
 name: sample instance
 - ec2:
-    key_name: 
-    region: us-east-1
+    key_name: bastion
+    region: {{ Enter region here }}
     count: 1
     instance_tags:
       Name: {{ put the instance name here }}
       Owner: {{ put the owner name here }}
-    instance_type: t2.micro
+    instance_type: {{ Enter instacne type here }}
     image: ami-25bd2743
     wait: yes
     group: git-lab
