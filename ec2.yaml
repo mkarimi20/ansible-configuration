@@ -7,7 +7,7 @@
       name: sec_group_ec2
       description: "this is test "
       vpc_id: vpc-2ada9250
-      region: '{{ Enter_reghion_here }}'
+      region: "{{ Enter_reghion_here }}"
       rules:
       - proto: tcp
         from_port: 22
@@ -19,8 +19,8 @@
   - name: Upload public key to AWS
     ec2: 
       key_name: bastion
-      region: '{{ Enter_reghion here }}'
-      instance_type: '{{ Enter_instance_type_here }}'
+      region: "{{ Enter_reghion_here }}"
+      instance_type: "{{ Enter_instance_type_here }}"
       image: ami-0a887e401f7654935      
       count: 1
       wait: yes
