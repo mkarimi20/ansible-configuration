@@ -18,7 +18,7 @@
     
   - name: Upload public key to AWS
     ec2: 
-      kye_name: bastion
+      key_name: bastion
       region: us-east-1
       instance_type: t2.micor
       image: ami-4bf3d731      
