@@ -29,7 +29,7 @@
       group: sec_group_ec2
       instance_tags:
         env: test_ect
-      count_tags:
+      count_tag:
         name: somename
     register: ec2_out
     
