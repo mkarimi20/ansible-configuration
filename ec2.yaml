@@ -39,10 +39,10 @@
     tags: "create_ec2"
 
   - name: Install necessary packages
-  package: 
+    package: 
     name: "{{item}}"
     state: latest
-  with_items:
+    with_items:
         - wget
         - unzip
         - php-gd
