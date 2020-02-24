@@ -7,27 +7,27 @@
       name: sec_group_ec2
       description: "this is test "
       vpc_id: vpc-2ada9250
-      region: us-east-1
+      region: '{{ Enter_reghion here }}'
       rules:
       - proto: tcp
         from_port: 22
         to_port: 22
         cidr_ip: 0.0.0.0/0
-        #register: result_sec_group
+    register: result_sec_group
 
     
   - name: Upload public key to AWS
     ec2: 
       key_name: bastion
-      region: us-east-1
-      instance_type: t2.micro
+      region: '{{ Enter_reghion here }}'
+      instance_type: '{{ Enter_instance_type_here }}'
       image: ami-0a887e401f7654935      
       count: 1
       wait: yes
       vpc_subnet_id: subnet-c6c7088b
-      #register: ec2_out
       assign_public_ip: yes
       group: sec_group_ec2
+    register: ec2_out
 
 
   #- name: wait for ssh
