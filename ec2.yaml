@@ -25,8 +25,8 @@
       count: 1
       wait: yes
       vpc_subnet_id: subnet-c6c7088b
-      register: ec2_out
-      #assign_public_ip: yes
+      #register: ec2_out
+      assign_public_ip: yes
       group: sec_group_ec2
 
 
