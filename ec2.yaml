@@ -4,16 +4,17 @@
   connection: local
   gather_facts: False
   - name: Create security group
-    name: sec_group_ec2
-    description: "this is test "
-    vpc_id: vpc-2ada9250
-    region: us-east-1
-    rules:
-    - proto: tcp
-      from_port: 22
-      to_port: 22
-      cidr_ip: 0.0.0.0/0
-      register: result_sec_group
+    ec2_group: 
+      name: sec_group_ec2
+      description: "this is test "
+      vpc_id: vpc-2ada9250
+      region: us-east-1
+      rules:
+      - proto: tcp
+        from_port: 22
+        to_port: 22
+        cidr_ip: 0.0.0.0/0
+        register: result_sec_group
 
     
   - name: Upload public key to AWS
