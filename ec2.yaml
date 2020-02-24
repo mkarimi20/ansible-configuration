@@ -21,7 +21,7 @@
       key_name: bastion
       region: us-east-1
       instance_type: t2.micor
-      image: ami-4bf3d731      
+      image: ami-0a887e401f7654935      
       count: 1
       wait: yes
       vpc_subnet_id: subnet-c6c7088b
