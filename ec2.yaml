@@ -1,6 +1,8 @@
 ---
-
-- hosts: localhost
+- name: Playbook for VPC
+  hosts: localhost
+  gather_facts: false
+  hosts: localhost
   tasks: 
   - name: Create security group
     ec2_group: 
@@ -18,7 +20,7 @@
     
   - name: Upload public key to AWS
     ec2: 
-      key_name: bastion
+      key_name: 
       region: "{{ Enter_reghion_here }}"
       instance_type: "{{ Enter_instance_type_here }}"
       image: ami-0a887e401f7654935      
