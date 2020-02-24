@@ -7,7 +7,7 @@
       name: sec_group_ec2
       description: "this is test "
       vpc_id: vpc-2ada9250
-      region: '{{ Enter_reghion here }}'
+      region: '{{ Enter_reghion_here }}'
       rules:
       - proto: tcp
         from_port: 22
