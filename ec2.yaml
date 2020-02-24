@@ -56,9 +56,9 @@
   notify: Restart_httpd
 
   - name: Download wordpress package
-    get_url:
-      url: "https://wordpress.org/wordpress:latest.tar.gz"
-      dest: /tmp/
+  get_url:
+    url: "https://wordpress.org/wordpress:latest.tar.gz"
+    dest: /tmp/
 
   - name: Unzip wordpress file
     unarchive:
