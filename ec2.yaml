@@ -28,7 +28,7 @@
       assign_public_ip: yes
       group: sec_group_ec2
       instance_tags:
-        env: test ect
+        env: test_ect
     register: ec2_out
     
 
