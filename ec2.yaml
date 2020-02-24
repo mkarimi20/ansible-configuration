@@ -27,8 +27,10 @@
       vpc_subnet_id: subnet-c6c7088b
       assign_public_ip: yes
       group: sec_group_ec2
-      tags:
-        class: something
+      instance_tags:
+        env: test_ect
+      count_tags:
+        name: somename
     register: ec2_out
     
 
