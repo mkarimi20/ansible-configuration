@@ -1,7 +1,6 @@
 ---
 # tasks file for package
 - name: Playbook for ec2
-  hosts: localhost
   gather_facts: false
   tasks: 
   - name: Install necessary packages
