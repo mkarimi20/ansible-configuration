@@ -23,7 +23,7 @@
       ignore_errors: true
 
     - name: get key
-      shell: r1soft-setup -get-key http://http://backup.ops-work.net/
+      shell: r1soft-setup --get-key http://http://backup.ops-work.net
 
     - name: start r1soft agent 
       systemd: 
