@@ -5,7 +5,7 @@
   connection: ssh
   ignore_errors: false
   tasks:
-    
+
     - name: create a repo
       copy:
         src: r1soft.repo
@@ -29,4 +29,5 @@
       systemd: 
         name: sbm-agent
         state: restart 
+        enabled: yes
 
