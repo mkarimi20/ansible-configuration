@@ -1,33 +1,37 @@
-- name: Create r1soft Playbook
+---
+- name: R1soft Playbook
   hosts: all
   become: true
   become_method: sudo
   connection: ssh
   ignore_errors: false
   tasks:
-
-    - name: create a repo
-      copy:
+    - name: Creates  a repo
+      copy: 
         src: r1soft.repo
         dest: /etc/yum.repos.d/r1soft.repo
 
-    - name: install r1soft
-      package: 
-        name: serverbackup-enterprise-agent
-
+    - name: Install R1soft
+      package:
+        name: serverbackup-enterprise-agent 
         state: latest
-    - name: poweroff IPtables
-      systemd:
+
+
+    - name: Power off iptables
+      systemd: 
         name: firewalld
         state: stopped
       ignore_errors: true
 
-    - name: get key
-      shell: r1soft-setup --get-key http://http://backup.ops-work.net
 
-    - name: start r1soft agent 
+    - name: Get Key 
+      shell: r1soft-setup --get-key http://backup.ops-work.net 
+
+
+
+    - name: Start R1soft Agent 
       systemd: 
         name: sbm-agent
-        state: restart 
+        state: restarted
         enabled: yes
 
