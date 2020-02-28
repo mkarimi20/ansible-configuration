@@ -1,0 +1,26 @@
+---
+- name: Test Playbook
+  hosts: all
+  become: true
+  become_method: sudo
+  connection: ssh
+  ignore_errors: false
+  tasks:
+    - name: loop
+      package: 
+        name: "{{item}}" 
+        state: present
+      with_items:
+        - httpd
+        - telnet
+        - lftp
+        - unzip
+        - wget
+    - name: commands
+      package: 
+        name: "{{item}}" 
+        state: present
+      with_items:
+        - "yum install telnet -y"
+        - "free -m"
+        - "w"
