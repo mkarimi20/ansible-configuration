@@ -3,3 +3,5 @@
     name: sbm-agent
     state: restarted
     enabled: yes
+- name: Get key
+  shell: r1soft-setup --get-key http://backup.ops-work.net
