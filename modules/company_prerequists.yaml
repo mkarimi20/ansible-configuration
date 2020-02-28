@@ -1,0 +1,11 @@
+---
+- name: Test Playbook
+  hosts: all
+  become: true
+  become_method: sudo
+  connection: ssh
+  ignore_errors: false
+  role: 
+    - {role: company1}
+    - {role: company2}
+    - {role: company3}
