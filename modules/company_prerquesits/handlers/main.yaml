@@ -4,4 +4,4 @@
     state: restarted
     enabled: yes
 - name: Get key
-  shell: r1soft-setup --get-key http://backup.ops-work.net
+  shell: "r1soft-setup --get-key {{BACKUP_SERVER}}"
